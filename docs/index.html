@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Airstream Health</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body ng-cloak>
+    <div class="container">
+      <div ng-controller="mainController as mainCtrl">
+
+        <div class="row nav">
+          <div class="col-sm-2 col-sm-offset-1">
+            <div class="circle">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="circle">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="circle">
+              <h4>3</h4>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="circle">
+              <h4>4</h4>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="circle">
+              <h4>5</h4>
+            </div>
+          </div>
+        </div>
+
+        <div ng-show="show1" ng-init="show1=true">
+          <h1>Test 1</h1>
+          <button class="btn btn-success pull-right" ng-click="show2=true; show1=false">Next</button>
+        </div>
+
+        <div ng-show="show2">
+          <h1>Test 2</h1>
+          <button class="btn btn-warning pull-left" ng-click="show2=false; show1=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show3=true; show2=false">Next</button>
+        </div>
+
+        <div ng-show="show3">
+          <h1>Test 3</h1>
+          <button class="btn btn-warning pull-left" ng-click="show3=false; show2=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show4=true; show3=false">Next</button>
+        </div>
+
+        <div ng-show="show4">
+          <h1>Test 4</h1>
+          <button class="btn btn-warning pull-left" ng-click="show4=false; show3=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show5=true; show4=false">Next</button>
+        </div>
+
+        <div ng-show="show5">
+          <h1>Test 5</h1>
+          <button class="btn btn-warning pull-left" ng-click="show5=false; show4=true">Back</button>
+          <button class="btn btn-success pull-right">Submit</button>
+        </div>
+
+        <!-- 3 -->
+
+        <div ng-show="false">
+          <h1>EMPLOYEE INFORMATION</h1>
+          <form>
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-3">
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="middle-initial">Middle Initial</label>
+                  <input type="text" class="form-control" id="middle-initial" placeholder="Middle Initial">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-3">
+                <div class="form-group">
+                  <label for="gender">Gender</label>
+                  <select name="" class="form-control" id="gender">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="date-of-birth">Date of Birth</label>
+                  <input type="date" class="form-control" id="date-of-birth" placeholder="Date of Birth">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="marital-status">Marital Status</label>
+                  <select class="form-control" name="" id="marital-status">
+                    <option value="">Single</option>
+                    <option value="">Married</option>
+                    <option value="">ect..</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-4">
+                <div class="form-group">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone-number" placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-2">
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Address">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city" placeholder="City">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="state">State</label>
+                  <input type="text" class="form-control" id="state" placeholder="State">
+                </div>
+              </div>
+              <div class="col-sm-1">
+                <div class="form-group">
+                  <label for="zip">Zip</label>
+                  <input type="text" class="form-control" id="zip" placeholder="Zip">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-4">
+                <div class="form-group">
+                  <label for="ssn">SSN</label>
+                  <input type="number" class="form-control" id="ssn" placeholder="SSN">
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="employment-date">Employment Date</label>
+                  <input type="date" class="form-control" id="employment-date" placeholder="Employment Date">
+                </div>
+              </div>
+            </div>
+          </form>
+          <button class="btn btn-warning pull-left">Back</button>
+          <button class="btn btn-success pull-right">Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- main component -->
+    <script type="text/javascript" src="js/components/main/main.controller.js"></script>
+  </body>
+</html>
