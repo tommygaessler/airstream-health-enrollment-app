@@ -15,27 +15,32 @@
         <div class="row nav">
           <div class="col-sm-2 col-sm-offset-1">
             <div class="circle">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <h4 ng-show="show1">1</h4>
+              <i ng-hide="show1" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-sm-2">
             <div class="circle">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <h4 ng-show="show2 || show1">2</h4>
+              <i ng-hide="show2 || show1" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-sm-2">
             <div class="circle">
-              <h4>3</h4>
+              <h4 ng-show="show3 || show1 || show2">3</h4>
+              <i ng-hide="show3 || show1 || show2" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-sm-2">
             <div class="circle">
-              <h4>4</h4>
+              <h4 ng-show="show4 || show1 || show2 || show3">4</h4>
+              <i ng-hide="show4 || show1 || show2 || show3" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-sm-2">
             <div class="circle">
               <h4>5</h4>
+              <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
             </div>
           </div>
         </div>
@@ -52,26 +57,6 @@
         </div>
 
         <div ng-show="show3">
-          <h1>Test 3</h1>
-          <button class="btn btn-warning pull-left" ng-click="show3=false; show2=true">Back</button>
-          <button class="btn btn-success pull-right" ng-click="show4=true; show3=false">Next</button>
-        </div>
-
-        <div ng-show="show4">
-          <h1>Test 4</h1>
-          <button class="btn btn-warning pull-left" ng-click="show4=false; show3=true">Back</button>
-          <button class="btn btn-success pull-right" ng-click="show5=true; show4=false">Next</button>
-        </div>
-
-        <div ng-show="show5">
-          <h1>Test 5</h1>
-          <button class="btn btn-warning pull-left" ng-click="show5=false; show4=true">Back</button>
-          <button class="btn btn-success pull-right">Submit</button>
-        </div>
-
-        <!-- 3 -->
-
-        <div ng-show="false">
           <h1>EMPLOYEE INFORMATION</h1>
           <form>
             <div class="row">
@@ -180,8 +165,20 @@
               </div>
             </div>
           </form>
-          <button class="btn btn-warning pull-left">Back</button>
-          <button class="btn btn-success pull-right">Next</button>
+          <button class="btn btn-warning pull-left" ng-click="show3=false; show2=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show4=true; show3=false">Next</button>
+        </div>
+
+        <div ng-show="show4">
+          <h1>Test 4</h1>
+          <button class="btn btn-warning pull-left" ng-click="show4=false; show3=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show5=true; show4=false">Next</button>
+        </div>
+
+        <div ng-show="show5">
+          <h1>Test 5</h1>
+          <button class="btn btn-warning pull-left" ng-click="show5=false; show4=true">Back</button>
+          <button class="btn btn-success pull-right">Submit</button>
         </div>
       </div>
     </div>
