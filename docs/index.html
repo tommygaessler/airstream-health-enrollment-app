@@ -39,24 +39,30 @@
           </div>
           <div class="col-sm-2">
             <div class="circle">
-              <h4>5</h4>
-              <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+              <h4 ng-show="show4 || show1 || show2 || show3 || show5">5</h4>
+              <i ng-hide="show4 || show1 || show2 || show3 || show5" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
         </div>
 
         <div ng-show="show1" ng-init="show1=true">
-          <h1>Test 1</h1>
+          <h1>CHECK ALL APPLICABLE BOXES</h1>
           <button class="btn btn-success pull-right" ng-click="show2=true; show1=false">Next</button>
         </div>
 
         <div ng-show="show2">
-          <h1>Test 2</h1>
+          <h1>SELECT COVERAGE</h1>
           <button class="btn btn-warning pull-left" ng-click="show2=false; show1=true">Back</button>
           <button class="btn btn-success pull-right" ng-click="show3=true; show2=false">Next</button>
         </div>
 
         <div ng-show="show3">
+          <h1>WAIVE MEDICAL COVERAGE</h1>
+          <button class="btn btn-warning pull-left" ng-click="show3=false; show2=true">Back</button>
+          <button class="btn btn-success pull-right" ng-click="show4=true; show3=false">Next</button>
+        </div>
+
+        <div ng-show="show4">
           <h1>EMPLOYEE INFORMATION</h1>
           <form>
             <div class="row">
@@ -165,20 +171,18 @@
               </div>
             </div>
           </form>
-          <button class="btn btn-warning pull-left" ng-click="show3=false; show2=true">Back</button>
-          <button class="btn btn-success pull-right" ng-click="show4=true; show3=false">Next</button>
-        </div>
-
-        <div ng-show="show4">
-          <h1>Test 4</h1>
           <button class="btn btn-warning pull-left" ng-click="show4=false; show3=true">Back</button>
           <button class="btn btn-success pull-right" ng-click="show5=true; show4=false">Next</button>
         </div>
 
         <div ng-show="show5">
-          <h1>Test 5</h1>
+          <h1>DEPENDENT COVERAGE</h1>
           <button class="btn btn-warning pull-left" ng-click="show5=false; show4=true">Back</button>
-          <button class="btn btn-success pull-right">Submit</button>
+          <button class="btn btn-success pull-right" ng-click="show5=false; showSuccess=true">Submit</button>
+        </div>
+
+        <div ng-show="showSuccess">
+          <h1>Success</h1>
         </div>
       </div>
     </div>
