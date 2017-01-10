@@ -13,31 +13,31 @@
       <div ng-controller="mainController as mainCtrl">
 
         <div class="row nav">
-          <div class="col-sm-2 col-sm-offset-1">
+          <div class="col-xs-2 col-xs-offset-1">
             <div class="circle">
               <h4 ng-show="show1">1</h4>
               <i ng-hide="show1" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-sm-2">
+          <div class="col-xs-2">
             <div class="circle">
               <h4 ng-show="show2 || show1">2</h4>
               <i ng-hide="show2 || show1" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-sm-2">
+          <div class="col-xs-2">
             <div class="circle">
               <h4 ng-show="show3 || show1 || show2">3</h4>
               <i ng-hide="show3 || show1 || show2" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-sm-2">
+          <div class="col-xs-2">
             <div class="circle">
               <h4 ng-show="show4 || show1 || show2 || show3">4</h4>
               <i ng-hide="show4 || show1 || show2 || show3" class="fa fa-check" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-sm-2">
+          <div class="col-xs-2">
             <div class="circle">
               <h4 ng-show="show4 || show1 || show2 || show3 || show5">5</h4>
               <i ng-hide="show4 || show1 || show2 || show3 || show5" class="fa fa-check" aria-hidden="true"></i>
@@ -182,7 +182,7 @@
         </div>
 
         <div ng-show="showSuccess">
-          <h1>Success</h1>
+          <h1 class="text-center">Success</h1>
         </div>
       </div>
     </div>

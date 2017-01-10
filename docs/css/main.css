@@ -16,6 +16,18 @@ h4 {
   margin: 0;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
 .fa-check {
   color: green;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.row {
+  margin-bottom: 20px;
 }
